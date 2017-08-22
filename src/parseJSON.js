@@ -19,7 +19,7 @@ var parseJSON = function(json) {
     var result = {};
     var place = [];
     var json = json.slice(1, json.length);
-    while (json.length > 2){
+    while (json.length > 2) {
       var hold = parseJSON(json);
       place.push(hold);
       json = json.slice(hold.length + 2);
@@ -27,8 +27,8 @@ var parseJSON = function(json) {
     
     for (var i = 0; i < place.length - 1; i++) {
       console.log();
-      if (place[i + 1] === "") {
-        result[place[i]] = "";
+      if (place[i + 1] === '') {
+        result[place[i]] = '';
         i++;
       } else {
         result[place[i]] = result[place[i + 1]];
